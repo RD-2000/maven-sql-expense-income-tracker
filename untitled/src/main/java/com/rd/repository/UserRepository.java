@@ -40,8 +40,8 @@ public class UserRepository {
         return false;
     }
 
-    public boolean getUserByUsername(String username) {
-        return false;
+    public User getUserByUsername(String username) {
+        return null;
     }
 
     public boolean addUser(User user) {

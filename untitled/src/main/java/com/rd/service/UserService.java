@@ -20,14 +20,14 @@ public class UserService {
         return userRepository.addUser(new User(0, username, password));
     }
 
-    public User loginUser(String username, String password) {
+    public boolean loginUser(String username, String password) {
         User user = userRepository.getUserByUsername(username);
         if (user != null && user.getPassword().equals(password)) {
             System.out.println("Login successful!");
-            return user;
+            return true;
         }
         System.out.println(" Invalid username or password.");
-        return null;
+        return false;
     }
 }
 
